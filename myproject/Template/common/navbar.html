@@ -1,0 +1,32 @@
+<ul>
+    {% if user.usertype == 'viewer' %}
+    <li><a href="{% url 'createresume' %}">create Resume</a></li>
+    
+
+    {% elif user.usertype == 'admin' %}
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Add</a>
+      <div class="dropdown-content">
+        <a href="{% url 'addskillpage' %}">Add Skill</a>
+        <a href="{% url 'addeducation' %}">Add Education</a>
+        <a href="{% url 'addinterest' %}">Add interest</a>
+        <a href="{% url 'addlanguage' %}">Add Language</a>
+      </div>
+    </li>
+    {% endif  %}
+    
+    <li><a href="{% url 'profilepage' %}">profile</a></li>
+    <li style="float:right "><a href="{% url 'logoutpage' %}">logout</a></li>
+  </ul>
+   
+
+
+
+
+
+
+
+
+
+    
+  
